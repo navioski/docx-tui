@@ -5,7 +5,7 @@
 Edit Microsoft Word documents without leaving the command line. Full menu bar,
 toolbars, page ruler, formatting controls, and native `.docx` round-trip.
 
-![Word 2003-style TUI with menu bar, toolbars, ruler, and white page]()
+![DocxTUI — Word 2003-style TUI with menu bar, toolbars, ruler, and white page](shots/docx-tui.svg)
 
 ---
 
@@ -143,14 +143,22 @@ docx-tui/
 - **[Textual](https://github.com/Textualize/textual)** — TUI framework
 - **[python-docx](https://python-docx.readthedocs.io/)** — .docx file format
 
+Pinned versions live in [`requirements.txt`](requirements.txt) — install with:
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+```
+
+(or `uv run main.py`, uv reads the same file)
+
 ---
 
 ## Running Tests
 
 ```bash
-.venv/bin/python test_smoke.py     # Editor insert + .docx round-trip
-.venv/bin/python test_format.py    # Bold / italic / underline round-trip
-.venv/bin/python test_font.py      # Font name / size round-trip
+.venv/bin/python tests/test_smoke.py     # Editor insert + .docx round-trip
+.venv/bin/python tests/test_format.py    # Bold / italic / underline round-trip
+.venv/bin/python tests/test_font.py      # Font name / size round-trip
 ```
 
 ---
